@@ -3,6 +3,8 @@ import { Link, Tabs } from 'expo-router';
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
 
+import { Home, LayoutGrid, Bookmark, User } from 'lucide-react-native'
+
 export default function TabLayout() {
   return (
     <Tabs
@@ -12,8 +14,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <Home color="#000" />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <HeaderButton />
@@ -22,10 +24,34 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="learn"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'learn',
+          tabBarIcon: ({ color }) => <LayoutGrid color="#000" />,
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <HeaderButton />
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: 'Explore',
+          tabBarIcon: ({ color }) => <Bookmark color="#000" />,
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <HeaderButton />
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="user"
+        options={{
+          title: 'User',
+          tabBarIcon: ({ color }) => <User color={color} />,
         }}
       />
     </Tabs>
