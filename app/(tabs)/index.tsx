@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native'
 
@@ -13,6 +14,7 @@ export default function HomeScreen() {
     { id: '07', title: 'Currency, Commodity, And Govt Securities', color: 'bg-orange-200' },
     { id: '08', title: 'Markets And Taxation', color: 'bg-teal-200' },
   ]
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.content}>
@@ -37,9 +39,9 @@ export default function HomeScreen() {
             </View>
           </View>
         </View>
-        
+
         <Text style={styles.sectionTitle}>Start reading</Text>
-        
+
         <View style={styles.moduleCard}>
           <Text style={styles.moduleLabel}>Module:</Text>
           <View style={styles.moduleHeader}>
@@ -85,9 +87,9 @@ export default function HomeScreen() {
             <Text className="text-gray-600">Mind over markets series</Text>
           </View>
         </View>
-        
+
         <Text className="text-2xl font-bold mt-6 mb-4">Modules</Text>
-        
+
         <View className="flex-row flex-wrap justify-between mb-8">
           {modules.map((module) => (
             <TouchableOpacity
@@ -103,7 +105,7 @@ export default function HomeScreen() {
       {/* <View style={styles.navbar}>
         <TouchableOpacity style={styles.navItem}>
           <Home size={24} color="#000" />
-          <Text style={styles.navText}>Home</Text>
+          <Text style={styles.navText}>Home</Text>   
         </TouchableOpacity>
         <TouchableOpacity style={styles.navItem}>
           <LayoutGrid size={24} color="#000" />
